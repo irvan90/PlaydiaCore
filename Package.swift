@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-	name: "Core",
+	name: "PlaydiaCore",
 	platforms: [.iOS(.v15), .macOS(.v10_15)],
 	products: [
 		// Products define the executables and libraries a package produces, and make them visible to other packages.
 		.library(
-			name: "Core",
-			targets: ["Core"])
+			name: "PlaydiaCore",
+			targets: ["PlaydiaCore"])
 	],
 	dependencies: [
 		// Dependencies declare other packages that this package depends on.
@@ -21,12 +21,12 @@ let package = Package(
 		// Targets are the basic building blocks of a package. A target can define a module or a test suite.
 		// Targets can depend on other targets in this package, and on products in packages this package depends on.
 		.target(
-			name: "Core",
+			name: "PlaydiaCore",
 			dependencies: [
 					.product(name: "RealmSwift", package: "realm-swift")
 			]),
 		.testTarget(
-			name: "CoreTests",
-			dependencies: ["Core"])
+			name: "PlaydiaCoreTests",
+			dependencies: ["PlaydiaCore"])
 	]
 )
